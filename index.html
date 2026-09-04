@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <title>Sunil Pant | Professional Graphic Designer</title>
   <meta name="description" content="Portfolio website of Sunil Pant, Professional Graphic Designer based in Kathmandu, Nepal." />
   <style>
@@ -72,14 +74,82 @@
     footer{padding:70px 0}.footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}.contact-list{display:flex;flex-direction:column;gap:10px}.contact-list a{padding:13px 15px;border:1px solid var(--line);border-radius:10px;color:var(--muted)}.contact-list a:hover{color:#fff;border-color:#455779}.fine{margin-top:30px;color:#79859a;font-size:.85rem}
     @media(max-width:850px){.hero-grid,.profile,.footer-grid{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.links{display:none}}
     @media(max-width:600px){.grid{grid-template-columns:1fr}.row{grid-template-columns:1fr;gap:8px}.hero{padding:78px 0 64px}section{padding:64px 0}}
+
+    /* Icon + profile image upgrade */
+    .brand i{margin-right:8px}
+    .links a{display:flex;align-items:center;gap:7px}
+    .links i{font-size:.82rem}
+    .hero-card{position:relative;overflow:hidden}
+    .profile-photo{
+      width:150px;height:150px;object-fit:cover;border-radius:24px;
+      display:block;margin-bottom:22px;border:2px solid rgba(255,255,255,.12);
+      box-shadow:0 18px 45px rgba(0,0,0,.3)
+    }
+    .eyebrow i{margin-right:8px}
+    .btn{display:inline-flex;align-items:center;gap:9px;transition:.2s ease}
+    .card h3{display:flex;align-items:center;gap:11px}
+    .card h3 i{color:var(--accent);width:22px;text-align:center}
+    .row strong{display:flex;align-items:center;gap:10px}
+    .row strong i{color:var(--accent);width:22px;text-align:center}
+    .fact span:first-child{display:flex;align-items:center;gap:9px}
+    .fact i{color:var(--accent);width:17px;text-align:center}
+    .timeline-item h3{display:flex;align-items:center;gap:10px}
+    .timeline-item h3 i{color:var(--accent)}
+    .objective{position:relative;overflow:hidden}
+    .objective:after{
+      content:"\\f121";font-family:"Font Awesome 6 Free";font-weight:900;
+      position:absolute;right:30px;bottom:-18px;font-size:8rem;opacity:.05
+    }
+    .contact-list a{display:flex;align-items:center;gap:11px;transition:.2s ease}
+    .contact-list a i{color:var(--accent);width:20px;text-align:center}
+    .section-head h2 i{font-size:.72em;color:var(--accent);margin-right:9px}
+    .hero-card .mini-icons{display:flex;gap:10px;margin-top:18px}
+    .mini-icons span{
+      width:38px;height:38px;border:1px solid var(--line);border-radius:10px;
+      display:grid;place-items:center;color:var(--accent);background:rgba(255,255,255,.02)
+    }
+    .service-icon{
+      width:48px;height:48px;border-radius:14px;display:grid;place-items:center;
+      background:linear-gradient(135deg,rgba(110,168,254,.16),rgba(139,92,246,.16));
+      border:1px solid var(--line);margin-bottom:15px;color:var(--accent);font-size:1.15rem
+    }
+    @media(max-width:600px){.profile-photo{width:125px;height:125px}}
+
+  
+
+    /* Premium professional upgrade */
+    .hero{position:relative;overflow:hidden;background:radial-gradient(circle at 80% 20%,rgba(110,168,254,.12),transparent 30%)}
+    .hero-card:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.04),transparent 45%);pointer-events:none}
+    .profile-photo{width:190px;height:250px;object-fit:cover;object-position:center top;border-radius:18px;position:relative;z-index:1}
+    .hero-card h3,.hero-card p,.hero-card .mini-icons{position:relative;z-index:1}
+    .hero-role{color:var(--accent);font-weight:700;margin:0 0 6px!important}
+    .tool-grid{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+    .tool-badge{display:flex;align-items:center;gap:9px;padding:11px 14px;border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:12px;font-size:.9rem;font-weight:700}
+    .tool-badge i{font-size:1.25rem;color:var(--accent)}
+    .social-row{display:flex;gap:10px;margin-top:20px}
+    .social-row a{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--line);border-radius:11px;color:var(--accent);transition:.2s ease}
+    .social-row a:hover{transform:translateY(-3px);background:rgba(110,168,254,.1);border-color:var(--accent)}
+    .stat-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+    .stat{padding:12px;border:1px solid var(--line);border-radius:12px;text-align:center;background:rgba(255,255,255,.02)}
+    .stat strong{display:block;font-size:1.1rem;color:var(--accent)}
+    .stat span{font-size:.76rem;color:var(--muted)}
+    .availability{display:inline-flex;align-items:center;gap:8px;color:#cbd5e1;font-size:.85rem;margin-top:10px}
+    .availability:before{content:"";width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 12px #22c55e}
+    .brand-mark{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:9px;margin-right:9px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff}
+    @media(max-width:600px){.profile-photo{width:160px;height:210px}.stat-strip{grid-template-columns:1fr 1fr 1fr}}
+
   </style>
 </head>
 <body>
 <nav>
   <div class="wrap nav-inner">
-    <a class="brand" href="#top">SUNIL <span>PANT</span></a>
+    <a class="brand" href="#top"><span class="brand-mark"><i class="fa-solid fa-pen-nib"></i></span>SUNIL <span>PANT</span></a>
     <div class="links">
-      <a href="#profile">Profile</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      <a href="#profile"><i class="fa-regular fa-user"></i>Profile</a>
+      <a href="#skills"><i class="fa-solid fa-wand-magic-sparkles"></i>Skills</a>
+      <a href="#projects"><i class="fa-solid fa-layer-group"></i>Projects</a>
+      <a href="#experience"><i class="fa-solid fa-briefcase"></i>Experience</a>
+      <a href="#contact"><i class="fa-regular fa-envelope"></i>Contact</a>
     </div>
   </div>
 </nav>
@@ -87,38 +157,43 @@
 <header class="hero" id="top">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">Professional Graphic Designer</div>
+      <div class="eyebrow"><i class="fa-solid fa-palette"></i>Professional Graphic Designer</div>
       <h1>Sunil Pant</h1>
       <p class="lead">Creative and detail-oriented Graphic Designer with experience in logo design, social media post design, YouTube thumbnail design, business card design, banner/flyer design, and photo editing.</p>
       <div class="actions">
-        <a class="btn primary" href="#contact">Contact Me</a>
-        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn primary" href="#contact"><i class="fa-regular fa-paper-plane"></i>Contact Me</a>
+        <a class="btn" href="#projects"><i class="fa-solid fa-arrow-down"></i>View Projects</a>
       </div>
     </div>
     <div class="hero-card">
-      <div class="initials">
-        <img src="https://cdn.phototourl.com/free/2026-09-04-b905ebb3-08f9-4362-90ac-ff21daf0f469.jpg">
+      <img class="profile-photo" src="data:image/jpeg;base64,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" alt="Sunil Pant - Professional Graphic Designer" />
+      <p class="hero-role"><i class="fa-solid fa-palette"></i> Visual Designer & Creative Editor</p>
+      <h3>Designing ideas into visuals.</h3>
+      <p>Focused on clean branding, engaging social media content, and professional digital design.</p>
+      <div class="availability">Available for freelance projects</div>
+      <div class="stat-strip">
+        <div class="stat"><strong>3+</strong><span>Years Experience</span></div>
+        <div class="stat"><strong>6+</strong><span>Design Services</span></div>
+        <div class="stat"><strong>100%</strong><span>Creative Focus</span></div>
       </div>
-      <h3>Graphic Designer</h3>
-      <p>Kathmandu, Nepal</p>
-      <p>Branding • Social Media • Thumbnails • Flyers • Photo Editing</p>
+      <div class="mini-icons"><span title="Graphic Design"><i class="fa-solid fa-pen-nib"></i></span><span title="Photo Editing"><i class="fa-solid fa-camera-retro"></i></span><span title="Video Editing"><i class="fa-solid fa-film"></i></span><span title="Branding"><i class="fa-solid fa-wand-magic-sparkles"></i></span></div>
     </div>
   </div>
 </header>
 
 <section id="profile">
   <div class="wrap">
-    <div class="section-head"><div class="num">01 — PROFILE</div><h2>About Me</h2></div>
+    <div class="section-head"><div class="num">01 — PROFILE</div><h2><i class="fa-regular fa-user"></i>About Me</h2></div>
     <div class="profile">
       <div>
         <p>Creative and detail-oriented Graphic Designer with experience in Logo Design, Social Media Post Design, YouTube Thumbnail Design, Business Card Design, Banner/Flyer Design, and Photo Editing.</p>
         <p>Skilled in creating visually engaging designs that help businesses and individuals build a strong brand presence. Proficient in Canva and familiar with Adobe Photoshop, with a passion for creativity, branding, and digital marketing.</p>
       </div>
       <div class="facts">
-        <div class="fact"><span>Location</span><span>Kathmandu, Nepal</span></div>
-        <div class="fact"><span>Email</span><span>pantsunil772@gmail.com</span></div>
-        <div class="fact"><span>Phone</span><span>+977 9767460875</span></div>
-        <div class="fact"><span>Education</span><span>Bachelor's Degree (Running)</span></div>
+        <div class="fact"><span><i class="fa-solid fa-location-dot"></i>Location</span><span>Kathmandu, Nepal</span></div>
+        <div class="fact"><span><i class="fa-regular fa-envelope"></i>Email</span><span>pantsunil772@gmail.com</span></div>
+        <div class="fact"><span><i class="fa-solid fa-phone"></i>Phone</span><span>+977 9767460875</span></div>
+        <div class="fact"><span><i class="fa-solid fa-graduation-cap"></i>Education</span><span>Bachelor's Degree (Running)</span></div>
       </div>
     </div>
   </div>
@@ -126,66 +201,80 @@
 
 <section id="skills">
   <div class="wrap">
-    <div class="section-head"><div class="num">02 — SKILLS</div><h2>Skills & Tools</h2></div>
+    <div class="section-head"><div class="num">02 — SKILLS</div><h2><i class="fa-solid fa-screwdriver-wrench"></i>Skills & Tools</h2></div>
     <div class="rows">
-      <div class="row"><strong>Graphic Design</strong><span>Logo Design, Social Media Post Design, YouTube Thumbnail Design, Business Card Design, Banner & Flyer Design, Photo Editing, Branding & Visual Identity.</span></div>
-      <div class="row"><strong>Design Tools</strong><span>Canva, Adobe Photoshop, Adobe Illustrator (Basic), Figma (Basic), Photopea.</span></div>
-      <div class="row"><strong>Professional Skills</strong><span>Creativity, Communication, Time Management, Team Collaboration, Problem Solving.</span></div>
+      <div class="row"><strong><i class="fa-solid fa-pen-nib"></i>Graphic Design</strong><span>Logo Design, Social Media Post Design, YouTube Thumbnail Design, Business Card Design, Banner & Flyer Design, Photo Editing, Branding & Visual Identity.</span></div>
+      <div class="row"><strong><i class="fa-solid fa-toolbox"></i>Design Tools</strong><span>Canva, Adobe Photoshop, Adobe Illustrator (Basic), Figma (Basic), Photopea.</span></div>
+      <div class="row"><strong><i class="fa-solid fa-users-gear"></i>Professional Skills</strong><span>Creativity, Communication, Time Management, Team Collaboration, Problem Solving.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="tools">
+  <div class="wrap">
+    <div class="section-head"><div class="num">02A — CREATIVE TOOLKIT</div><h2><i class="fa-solid fa-cubes"></i>Tools I Use</h2></div>
+    <p class="lead" style="font-size:1rem">A modern creative toolkit for building polished designs and digital experiences.</p>
+    <div class="tool-grid">
+      <div class="tool-badge"><i class="fa-solid fa-c"></i>Canva</div>
+      <div class="tool-badge"><i class="fa-solid fa-image"></i>Adobe Photoshop</div>
+      <div class="tool-badge"><i class="fa-solid fa-pen-nib"></i>Adobe Illustrator</div>
+      <div class="tool-badge"><i class="fa-brands fa-figma"></i>Figma</div>
+      <div class="tool-badge"><i class="fa-solid fa-wand-magic-sparkles"></i>Photopea</div>
     </div>
   </div>
 </section>
 
 <section id="projects">
   <div class="wrap">
-    <div class="section-head"><div class="num">03 — PROJECTS</div><h2>Selected Projects</h2></div>
+    <div class="section-head"><div class="num">03 — PROJECTS</div><h2><i class="fa-solid fa-folder-open"></i>Selected Projects</h2></div>
     <div class="grid">
-      <div class="card"><h3>Logo Design</h3><p>Created modern and professional logo concepts for businesses and personal brands.</p></div>
-      <div class="card"><h3>Social Media Design</h3><p>Designed promotional posts for Facebook, Instagram, and other social platforms.</p></div>
-      <div class="card"><h3>YouTube Thumbnail Design</h3><p>Produced attractive thumbnails focused on increasing engagement and clicks.</p></div>
-      <div class="card"><h3>Flyer & Banner Design</h3><p>Developed marketing materials, event posters, and promotional banners.</p></div>
-      <div class="card"><h3>Photo Editing</h3><p>Performed image enhancement, background removal, color correction, and retouching.</p></div>
-      <div class="card"><h3>Business Card Design</h3><p>Professional business card layouts for personal and business branding.</p></div>
+      <div class="card"><div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div><h3>Logo Design</h3><p>Created modern and professional logo concepts for businesses and personal brands.</p></div>
+      <div class="card"><div class="service-icon"><i class="fa-solid fa-share-nodes"></i></div><h3>Social Media Design</h3><p>Designed promotional posts for Facebook, Instagram, and other social platforms.</p></div>
+      <div class="card"><div class="service-icon"><i class="fa-solid fa-youtube"></i></div><h3>YouTube Thumbnail Design</h3><p>Produced attractive thumbnails focused on increasing engagement and clicks.</p></div>
+      <div class="card"><div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div><h3>Flyer & Banner Design</h3><p>Developed marketing materials, event posters, and promotional banners.</p></div>
+      <div class="card"><div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div><h3>Photo Editing</h3><p>Performed image enhancement, background removal, color correction, and retouching.</p></div>
+      <div class="card"><div class="service-icon"><i class="fa-solid fa-address-card"></i></div><h3>Business Card Design</h3><p>Professional business card layouts for personal and business branding.</p></div>
     </div>
   </div>
 </section>
 
 <section id="experience">
   <div class="wrap">
-    <div class="section-head"><div class="num">04 — EXPERIENCE</div><h2>Work Experience</h2></div>
-    <div class="timeline"><div class="timeline-item"><h3>Freelance Graphic Designer</h3><div class="meta">Remote | Self-Employed</div><p>Designed branding materials and digital graphics, delivered creative projects according to client requirements, and maintained quality, consistency, and timely project completion.</p></div></div>
+    <div class="section-head"><div class="num">04 — EXPERIENCE</div><h2><i class="fa-solid fa-briefcase"></i>Work Experience</h2></div>
+    <div class="timeline"><div class="timeline-item"><h3><i class="fa-solid fa-briefcase"></i>Freelance Graphic Designer</h3><div class="meta">Remote | Self-Employed</div><p>Designed branding materials and digital graphics, delivered creative projects according to client requirements, and maintained quality, consistency, and timely project completion.</p></div></div>
   </div>
 </section>
 
 <section id="education">
   <div class="wrap">
-    <div class="section-head"><div class="num">05 — EDUCATION</div><h2>Education</h2></div>
-    <div class="timeline"><div class="timeline-item"><h3>Bachelor's Degree (Running)</h3><div class="meta">LBEF, Kathmandu, Nepal</div></div></div>
+    <div class="section-head"><div class="num">05 — EDUCATION</div><h2><i class="fa-solid fa-graduation-cap"></i>Education</h2></div>
+    <div class="timeline"><div class="timeline-item"><h3><i class="fa-solid fa-graduation-cap"></i>Bachelor's Degree (Running)</h3><div class="meta">LBEF, Kathmandu, Nepal</div></div></div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="section-head"><div class="num">06 — LANGUAGES</div><h2>Languages</h2></div>
+    <div class="section-head"><div class="num">06 — LANGUAGES</div><h2><i class="fa-solid fa-language"></i>Languages</h2></div>
     <div class="grid">
-      <div class="card"><h3>Nepali</h3><p>Native</p></div>
-      <div class="card"><h3>English</h3><p>Intermediate</p></div>
+      <div class="card"><h3><i class="fa-solid fa-language"></i>Nepali</h3><p>Native</p></div>
+      <div class="card"><h3><i class="fa-solid fa-globe"></i>English</h3><p>Intermediate</p></div>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="section-head"><div class="num">07 — CAREER OBJECTIVE</div><h2>Career Objective</h2></div>
+    <div class="section-head"><div class="num">07 — CAREER OBJECTIVE</div><h2><i class="fa-solid fa-bullseye"></i>Career Objective</h2></div>
     <div class="objective"><p>To obtain a Graphic Designer position where I can utilize my creative skills, contribute innovative design solutions, and continue growing as a professional designer while working with clients and organizations worldwide.</p></div>
   </div>
 </section>
 
 <footer id="contact">
   <div class="wrap footer-grid">
-    <div><div class="num">CONTACT</div><h2>Let's work together.</h2><p style="color:var(--muted)">Portfolio Services: Logo Design, Social Media Post Design, YouTube Thumbnail Design, Business Card Design, Banner/Flyer Design, Photo Editing.</p></div>
+    <div><div class="num">CONTACT</div><h2><i class="fa-solid fa-handshake"></i>Let's work together.</h2><p style="color:var(--muted)">Portfolio Services: Logo Design, Social Media Post Design, YouTube Thumbnail Design, Business Card Design, Banner/Flyer Design, Photo Editing.</p></div>
     <div class="contact-list">
-      <a href="mailto:pantsunil772@gmail.com">pantsunil772@gmail.com</a>
-      <a href="tel:+9779767460875">+977 9767460875</a>
+      <a href="mailto:pantsunil772@gmail.com"><i class="fa-regular fa-envelope"></i>pantsunil772@gmail.com</a>
+      <a href="tel:+9779767460875"><i class="fa-solid fa-phone"></i>+977 9767460875</a>
     </div>
   </div>
   <div class="wrap fine">© 2026 Sunil Pant · Professional Graphic Designer · Kathmandu, Nepal</div>
