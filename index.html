@@ -235,9 +235,64 @@ section::after{content:"";position:absolute;width:220px;height:220px;border-radi
 @media(max-width:700px){.video-bg video{opacity:.12}.video-glow{opacity:.12}#premiumParticles{opacity:.45}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
 
+
+/* ===== ULTRA PREMIUM MOTION UPGRADE ===== */
+@media (prefers-reduced-motion:no-preference){
+  .hero h1{background:linear-gradient(90deg,#fff 0%,#6ea8fe 35%,#c4b5fd 55%,#fff 100%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:titleIn 1s .15s both,textShimmer 7s linear infinite}
+  @keyframes textShimmer{to{background-position:220% center}}
+  .eyebrow{animation:fadeUp .7s both,softBlink 3s 1s ease-in-out infinite}
+  @keyframes softBlink{50%{filter:drop-shadow(0 0 10px rgba(110,168,254,.7))}}
+  .hero-card{transform-style:preserve-3d}
+  .hero-card:hover{box-shadow:0 35px 90px rgba(0,0,0,.48),0 0 45px rgba(110,168,254,.18)}
+  .initials,.brand-mark{position:relative;overflow:hidden}
+  .brand-mark:after{content:'';position:absolute;inset:-40%;background:linear-gradient(120deg,transparent 40%,rgba(255,255,255,.75),transparent 60%);animation:iconShine 3.5s infinite}
+  @keyframes iconShine{0%,60%{transform:translateX(-130%) rotate(15deg)}100%{transform:translateX(130%) rotate(15deg)}}
+  .section-head h2{transition:letter-spacing .35s ease,transform .35s ease}
+  section:hover .section-head h2{letter-spacing:.015em;transform:translateX(4px)}
+  .card{transform-style:preserve-3d}
+  .card::before{content:'';position:absolute;inset:0;border-radius:inherit;background:linear-gradient(135deg,rgba(110,168,254,.12),transparent 35%,rgba(139,92,246,.08));opacity:0;transition:.35s;pointer-events:none}
+  .card{position:relative;overflow:hidden}.card:hover::before{opacity:1}
+  .contact-list a{position:relative;overflow:hidden}.contact-list a:before{content:'';position:absolute;inset:0;transform:translateX(-110%);background:linear-gradient(90deg,transparent,rgba(110,168,254,.12),transparent);transition:.5s}.contact-list a:hover:before{transform:translateX(110%)}
+}
+
+
+/* ===== ULTIMATE PREMIUM MOTION LAYER ===== */
+h1{background:linear-gradient(90deg,#fff,#6ea8fe,#8b5cf6,#22d3ee,#fff);background-size:300% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradientFlow 7s linear infinite}
+@keyframes gradientFlow{to{background-position:300% center}}
+.hero h1::after{content:"";display:block;width:42%;height:2px;margin-top:18px;background:linear-gradient(90deg,transparent,#6ea8fe,#8b5cf6,transparent);background-size:200% 100%;animation:lineShimmer 3s linear infinite}
+@keyframes lineShimmer{to{background-position:200% 0}}
+.hero-card,.card,.objective{transform-style:preserve-3d}
+.hero-card{box-shadow:0 30px 80px rgba(0,0,0,.45),0 0 35px rgba(110,168,254,.12)}
+.hero-card::after{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(135deg,transparent,rgba(110,168,254,.6),rgba(139,92,246,.55),transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;animation:borderGlow 5s linear infinite}
+@keyframes borderGlow{to{filter:hue-rotate(50deg)}}
+.btn.primary{position:relative;overflow:hidden}
+.btn.primary::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 25%,rgba(255,255,255,.35) 50%,transparent 75%);transform:translateX(-130%);animation:buttonShine 3.5s ease-in-out infinite}
+@keyframes buttonShine{50%,100%{transform:translateX(130%)}}
+
+
+/* ===== SATELLITE TRACKER HUD EXPERIENCE ===== */
+.satellite-hud{position:fixed;inset:0;pointer-events:none;z-index:-2;overflow:hidden;opacity:.7}
+.earth-orbit{position:absolute;width:min(62vw,760px);aspect-ratio:1;right:-12vw;top:12vh;border-radius:50%;border:1px solid rgba(110,168,254,.18);box-shadow:inset 0 0 80px rgba(34,211,238,.05),0 0 80px rgba(110,168,254,.06);animation:orbitSpin 38s linear infinite}
+.earth-orbit:before,.earth-orbit:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(139,92,246,.15);inset:12%;transform:rotateX(68deg)}
+.earth-orbit:after{inset:26%;transform:rotateY(68deg)}
+.sat{position:absolute;width:12px;height:12px;border-radius:50%;background:#dff7ff;box-shadow:0 0 10px #6ea8fe,0 0 28px #22d3ee;left:8%;top:48%;animation:satPulse 1.8s ease-in-out infinite}
+.sat:before,.sat:after{content:"";position:absolute;background:linear-gradient(90deg,#6ea8fe,#8b5cf6);width:26px;height:5px;top:3px}.sat:before{right:14px}.sat:after{left:14px}
+.hud-line{position:absolute;width:35vw;height:1px;background:linear-gradient(90deg,transparent,rgba(110,168,254,.35),transparent);animation:hudScan 7s linear infinite}.hud-line:nth-child(2){top:28%;animation-delay:-2s}.hud-line:nth-child(3){top:67%;animation-delay:-5s}
+.telemetry{position:fixed;right:18px;bottom:18px;z-index:4;font:10px/1.6 monospace;letter-spacing:.12em;color:rgba(174,215,255,.65);text-align:right;text-transform:uppercase;pointer-events:none;text-shadow:0 0 12px rgba(110,168,254,.45);animation:telemetryFlicker 4s infinite}
+@keyframes orbitSpin{to{transform:rotate(360deg)}}
+@keyframes satPulse{50%{transform:scale(1.45);box-shadow:0 0 18px #6ea8fe,0 0 45px #22d3ee}}
+@keyframes hudScan{0%{transform:translateX(-50vw);opacity:0}15%,85%{opacity:1}100%{transform:translateX(120vw);opacity:0}}
+@keyframes telemetryFlicker{0%,96%,100%{opacity:.65}97%{opacity:.2}98%{opacity:.8}}
+
+
+/* ===== GHOST CINEMATIC SOUND + VIDEO EXPERIENCE ===== */
+.sound-control{position:fixed;right:22px;bottom:22px;z-index:10000;display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;border:1px solid rgba(110,168,254,.45);background:rgba(5,10,25,.78);backdrop-filter:blur(16px);color:#eaf2ff;font-weight:800;cursor:pointer;box-shadow:0 0 30px rgba(110,168,254,.22);transition:.3s ease}.sound-control:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 0 40px rgba(139,92,246,.4)}.sound-wave{display:flex;align-items:center;gap:3px;height:18px}.sound-wave i{display:block;width:3px;border-radius:4px;background:#6ea8fe;animation:wave .9s ease-in-out infinite}.sound-wave i:nth-child(2){animation-delay:.12s}.sound-wave i:nth-child(3){animation-delay:.24s}.sound-wave i:nth-child(4){animation-delay:.36s}.sound-wave.paused i{animation-play-state:paused;height:4px!important}@keyframes wave{0%,100%{height:4px}50%{height:18px}}.ghost-vignette{position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at center,transparent 30%,rgba(0,0,0,.38) 100%);mix-blend-mode:multiply}.signal-flash{position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(90deg,transparent,rgba(110,168,254,.035),transparent);animation:ghostScan 8s linear infinite}@keyframes ghostScan{from{transform:translateX(-110%)}to{transform:translateX(110%)}}
+
 </style>
 </head>
 <body>
+<div class="satellite-hud" aria-hidden="true"><div class="earth-orbit"><span class="sat"></span></div><div class="hud-line"></div><div class="hud-line"></div></div><div class="telemetry" aria-hidden="true">SATELLITE LINK: ONLINE<br>ORBITAL HUD // SUNIL PANT<br>SIGNAL STRENGTH: 98.7%</div>
+
 <!-- Premium cinematic video background -->
 <div class="video-bg" aria-hidden="true">
   <video autoplay muted loop playsinline poster="">
@@ -248,6 +303,10 @@ section::after{content:"";position:absolute;width:220px;height:220px;border-radi
 </div>
 <canvas id="premiumParticles"></canvas>
 <div id="scrollProgress"></div>
+
+
+<div class="ghost-vignette" aria-hidden="true"></div><div class="signal-flash" aria-hidden="true"></div>
+<button class="sound-control" id="soundControl" type="button" aria-label="Enable cinematic sound"><span class="sound-wave paused" id="soundWave"><i></i><i></i><i></i><i></i></span><span id="soundLabel">ENABLE SOUND</span></button>
 
 <nav>
   <div class="wrap nav-inner">
@@ -430,5 +489,82 @@ document.querySelectorAll('.btn').forEach(btn=>{btn.addEventListener('mousemove'
  document.querySelectorAll('.btn').forEach(b=>b.addEventListener('mouseleave',()=>b.style.transform=''));
 })();
 </script>
+
+<script>
+// Smooth cinematic mouse parallax + card tilt
+(() => {
+ const hero=document.querySelector('.hero'); const card=document.querySelector('.hero-card');
+ if(hero&&card&&matchMedia('(pointer:fine)').matches){hero.addEventListener('mousemove',e=>{const r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`translate(${x*8}px,${y*8}px) rotateY(${x*5}deg) rotateX(${-y*4}deg)`});hero.addEventListener('mouseleave',()=>card.style.transform='');}
+ document.querySelectorAll('.card').forEach(c=>{if(!matchMedia('(pointer:fine)').matches)return;c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`translateY(-10px) rotateY(${x*5}deg) rotateX(${-y*5}deg) scale(1.015)`});c.addEventListener('mouseleave',()=>c.style.transform='');});
+})();
+</script>
+
+
+<script>
+/* Dynamic premium particles + cursor glow */
+(() => {
+ const canvas=document.getElementById('premiumParticles');
+ if(!canvas)return;
+ const ctx=canvas.getContext('2d'); let w,h,pts=[];
+ const resize=()=>{w=canvas.width=innerWidth*devicePixelRatio;h=canvas.height=innerHeight*devicePixelRatio;ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0)};
+ resize(); addEventListener('resize',resize);
+ for(let i=0;i<55;i++)pts.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*2+.4,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,a:Math.random()*.55+.15});
+ function draw(){ctx.clearRect(0,0,innerWidth,innerHeight);pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>innerWidth)p.vx*=-1;if(p.y<0||p.y>innerHeight)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(110,168,254,${p.a})`;ctx.fill()});requestAnimationFrame(draw)}draw();
+})();
+</script>
+
+
+<script>
+/* Improved Ghost cinematic ambient audio: click button once to start (browser permission) */
+(()=>{const btn=document.getElementById('soundControl'),label=document.getElementById('soundLabel'),wave=document.getElementById('soundWave');let ctx,master,enabled=false,osc=[],timers=[];
+function tone(freq,dur,vol,type='sine'){if(!ctx)return;const o=ctx.createOscillator(),g=ctx.createGain();o.type=type;o.frequency.setValueAtTime(freq,ctx.currentTime);g.gain.setValueAtTime(.0001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(vol,ctx.currentTime+.03);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+dur);o.connect(g).connect(master);o.start();o.stop(ctx.currentTime+dur+.05)}
+async function start(){ctx=new (window.AudioContext||window.webkitAudioContext)();await ctx.resume();master=ctx.createGain();master.gain.value=.32;master.connect(ctx.destination);
+const hum=ctx.createOscillator(),hg=ctx.createGain();hum.type='sine';hum.frequency.value=55;hg.gain.value=.18;hum.connect(hg).connect(master);hum.start();osc.push(hum);
+const drone=ctx.createOscillator(),dg=ctx.createGain();drone.type='triangle';drone.frequency.value=110;dg.gain.value=.06;drone.connect(dg).connect(master);drone.start();osc.push(drone);
+const ping=()=>{if(!enabled||!ctx)return;tone(760,.75,.35,'sine');setTimeout(()=>tone(1180,.18,.18,'sine'),180);timers.push(setTimeout(ping,3500+Math.random()*3500))};ping();tone(180,.45,.35,'sawtooth')}
+async function toggle(){enabled=!enabled;if(enabled){try{await start();label.textContent='SOUND ON';wave.classList.remove('paused');btn.style.boxShadow='0 0 45px rgba(110,168,254,.75)'}catch(e){enabled=false;label.textContent='CLICK TO ENABLE SOUND'}}else{timers.forEach(clearTimeout);timers=[];osc.forEach(o=>{try{o.stop()}catch(e){}});osc=[];if(ctx){await ctx.close();ctx=null}label.textContent='ENABLE SOUND';wave.classList.add('paused');btn.style.boxShadow=''}}btn.addEventListener('click',toggle)})();
+</script>
+
+
+<style>
+#ultraGhostSound{position:fixed;right:22px;bottom:22px;z-index:100000;border:2px solid #8b5cf6;border-radius:999px;padding:14px 20px;background:#090014;color:#fff;font-weight:900;letter-spacing:.08em;cursor:pointer;box-shadow:0 0 30px #8b5cf6,0 0 70px rgba(110,168,254,.6);animation:ghostBtn 1s infinite alternate}
+@keyframes ghostBtn{to{transform:scale(1.06);box-shadow:0 0 45px #22d3ee,0 0 100px rgba(139,92,246,.8)}}
+</style>
+<button id="ultraGhostSound">🔊 ENABLE ULTRA GHOST SOUND</button>
+<script>
+(()=>{let ctx,master,started=false,osc=[];const b=document.getElementById('ultraGhostSound');
+function start(){if(started){ctx.resume();return} started=true;ctx=new (window.AudioContext||window.webkitAudioContext)();master=ctx.createGain();master.gain.value=.9;master.connect(ctx.destination);
+// Deep horror drone
+[[42,.55,'sine'],[55,.32,'sawtooth'],[82,.18,'triangle']].forEach(([f,v,t])=>{let o=ctx.createOscillator(),g=ctx.createGain();o.type=t;o.frequency.value=f;g.gain.value=v;o.connect(g).connect(master);o.start();osc.push(o)});
+// Ghost wobble modulation
+let l=ctx.createOscillator(),lg=ctx.createGain();l.frequency.value=.12;lg.gain.value=18;l.connect(lg);osc.forEach(o=>lg.connect(o.frequency));l.start();
+// periodic loud eerie signal
+setInterval(()=>{if(!started)return;let o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.setValueAtTime(700,ctx.currentTime);o.frequency.exponentialRampToValueAtTime(90,ctx.currentTime+1.4);g.gain.setValueAtTime(.001,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.65,ctx.currentTime+.05);g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+1.6);o.connect(g).connect(master);o.start();o.stop(ctx.currentTime+1.7)},2600);
+// noise burst / haunted wind
+const len=ctx.sampleRate*2,buf=ctx.createBuffer(1,len,ctx.sampleRate),d=buf.getChannelData(0);for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*(1-i/len);let n=ctx.createBufferSource(),ng=ctx.createGain(),filter=ctx.createBiquadFilter();n.buffer=buf;n.loop=true;filter.type='lowpass';filter.frequency.value=700;ng.gain.value=.28;n.connect(filter).connect(ng).connect(master);n.start();
+b.textContent='👻 ULTRA GHOST SOUND ON';}
+b.addEventListener('click',()=>{start();ctx.resume();});})();
+</script>
+
+
+<!-- EXTREME CINEMATIC HORROR SOUND UPGRADE -->
+<style>
+#dangerGhostSound{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:100001;padding:16px 26px;border-radius:999px;border:2px solid #ff2d55;background:rgba(18,0,8,.92);color:#fff;font-weight:900;letter-spacing:.08em;cursor:pointer;box-shadow:0 0 30px rgba(255,45,85,.8),0 0 80px rgba(139,92,246,.65);animation:dangerPulse .8s infinite alternate}
+@keyframes dangerPulse{to{filter:brightness(1.2);box-shadow:0 0 50px rgba(255,45,85,1),0 0 120px rgba(110,168,254,.75)}}
+</style>
+<button id="dangerGhostSound">⚠️ ENABLE EXTREME HORROR SOUND</button>
+<script>
+(()=>{let ctx,master,started=false,voices=[],intervals=[];const b=document.getElementById('dangerGhostSound');
+function makeOsc(f,v,type){const o=ctx.createOscillator(),g=ctx.createGain();o.type=type;o.frequency.value=f;g.gain.value=v;o.connect(g).connect(master);o.start();voices.push(o);return o}
+function scream(){if(!started)return;const o=ctx.createOscillator(),g=ctx.createGain(),f=ctx.createBiquadFilter();o.type='sawtooth';o.frequency.setValueAtTime(240,ctx.currentTime);o.frequency.exponentialRampToValueAtTime(1650,ctx.currentTime+.45);o.frequency.exponentialRampToValueAtTime(120,ctx.currentTime+1.6);f.type='bandpass';f.frequency.value=900;f.Q.value=4;g.gain.setValueAtTime(.001,ctx.currentTime);g.gain.linearRampToValueAtTime(.42,ctx.currentTime+.08);g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+1.7);o.connect(f).connect(g).connect(master);o.start();o.stop(ctx.currentTime+1.8)}
+function start(){if(started){ctx.resume();return}started=true;ctx=new (window.AudioContext||window.webkitAudioContext)();master=ctx.createGain();master.gain.value=.72;master.connect(ctx.destination);
+[ [36,.34,'sine'],[48,.22,'sawtooth'],[73,.12,'triangle'],[97,.07,'square'] ].forEach(x=>makeOsc(...x));
+const lfo=ctx.createOscillator(),lg=ctx.createGain();lfo.frequency.value=.18;lg.gain.value=14;lfo.connect(lg);voices.forEach(o=>lg.connect(o.frequency));lfo.start();voices.push(lfo);
+const len=ctx.sampleRate*3,buf=ctx.createBuffer(1,len,ctx.sampleRate),d=buf.getChannelData(0);for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*(0.25+0.75*Math.sin(i/5000)**2);const n=ctx.createBufferSource(),ng=ctx.createGain(),bp=ctx.createBiquadFilter();n.buffer=buf;n.loop=true;bp.type='bandpass';bp.frequency.value=420;bp.Q.value=.7;ng.gain.value=.16;n.connect(bp).connect(ng).connect(master);n.start();voices.push(n);
+setTimeout(scream,900);intervals.push(setInterval(()=>{if(Math.random()>.35)scream()},4200));
+b.textContent='👻 EXTREME HORROR SOUND ON';}
+b.addEventListener('click',()=>{start();ctx.resume()});})();
+</script>
+
 </body>
 </html>
